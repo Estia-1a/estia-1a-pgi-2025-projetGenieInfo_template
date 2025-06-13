@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//test commentaire Evrard
 #include <estia-image.h>
 #include <getopt.h>
 
@@ -17,6 +17,8 @@ int main(int argc, char **argv) {
    */
 
   /*DO NOT EDIT THIS PART*/
+  /*test nathan num 2 */
+
   Config configuration ;
   parse_arguments( argc, argv, &configuration ) ;
   check_debug_mode(configuration);
