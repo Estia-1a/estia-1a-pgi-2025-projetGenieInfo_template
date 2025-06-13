@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+//test commentaire Evrard
 #include <estia-image.h>
 #include <getopt.h>
 
@@ -17,6 +17,8 @@ int main(int argc, char **argv) {
    */
 
   /*DO NOT EDIT THIS PART*/
+  /*test nathan num 2 */
+
   Config configuration ;
   parse_arguments( argc, argv, &configuration ) ;
   check_debug_mode(configuration);
@@ -30,10 +32,62 @@ int main(int argc, char **argv) {
   if ( strncmp( configuration.command, "helloworld", 10 ) == 0 ) {
     /* helloworld() function is defined in feature.h and implemented in feature.c */
     helloWorld();
+    
+  } 
+  else if (strncmp( configuration.command,"dimension",9)==0){
+    /*dimension() function is defined in feature.h and implemented in feature.c*/
+    dimension(configuration.filenames[0]);
+    
   }
-  /*
-   * TO COMPLETE
-   */
-  
+  else if (strncmp( configuration.command, "first_pixel",11)==0){
+    first_pixel(configuration.filenames[0]);
+  }
+  else if ( strncmp( configuration.command, "tenth_pixel", 9 ) == 0 ) {
+    /* helloworld() function is defined in feature.h and implemented in feature.c */
+    tenth_pixel("image.png");
+  }
+  else if (strncmp(configuration.command,"second_line", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"print_pixel",11)==0){
+    int x = atoi(configuration.arguments[0]);
+    int y= atoi(configuration.arguments[1]);
+    print_pixel(configuration.filenames[0],x,y);
+  }
+
+  ///////
+  else if (strncmp(configuration.command,"max_pixel", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"min_pixel", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"max_component", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"min_component", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"stat_report", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"color_red", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"color_green", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"color_blue", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"color_grey", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"color_gray_luminance", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
+  else if (strncmp(configuration.command,"color_desaturate", 11)==0) {
+    second_line(configuration.filenames[0]);
+  }
   return 0;
 }
