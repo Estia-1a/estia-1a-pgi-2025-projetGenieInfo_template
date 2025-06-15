@@ -9,6 +9,8 @@
 #include "utils.h"
 #include "argsparse.h"
 
+
+
 int main(int argc, char **argv) {
   /*To use debug mode: 
    - add --debug: freud.exe --debug -f images/input/image.jpeg
